@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080b18"><meta name="description" content="ClipNova V5 — tải video nhanh, đẹp, gọn.">
+<title>ClipNova V5</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="aurora a1"></div><div class="aurora a2"></div><div class="grid"></div>
+<header class="topbar glass"><div class="brand"><span class="logo">✦</span><div><b>ClipNova</b><small>V5 • SMART DOWNLOADER</small></div></div><button id="settingsBtn" class="iconbtn" aria-label="Cài đặt">⚙</button></header>
+<main>
+<section class="hero"><div class="eyebrow">⚡ FAST • CLEAN • TELEGRAM READY</div><h1>Tải video.<br><span>Không rối.</span></h1><p>Dán link YouTube, TikTok và nhiều nguồn được yt-dlp hỗ trợ. Xem trước rồi chọn MP4 hoặc MP3.</p></section>
+<section class="card glass downloader">
+  <div class="urlbox"><span>🔗</span><input id="url" type="url" inputmode="url" autocomplete="off" placeholder="Dán link video vào đây…"><button id="pasteBtn" class="mini">DÁN</button></div>
+  <button id="inspectBtn" class="primary"><span>Phân tích link</span><i>→</i></button>
+  <div id="status" class="status"></div>
+</section>
+<section id="preview" class="card glass preview hidden">
+  <div class="thumbwrap"><img id="thumb" alt="Thumbnail"><div id="duration" class="pill"></div></div>
+  <div class="meta"><div id="title" class="title">—</div><div id="uploader" class="muted">—</div><p id="desc" class="desc"></p></div>
+  <div class="formats"><div class="sectionlabel">CHỌN ĐỊNH DẠNG</div><div id="formatBtns" class="formatgrid"></div></div>
+</section>
+<section id="progressCard" class="card glass hidden"><div class="progressTop"><b id="progressLabel">Đang tải…</b><span id="percent">0%</span></div><div class="bar"><div id="barFill"></div></div><div id="progressMsg" class="muted">Đang chuẩn bị</div></section>
+<section class="features"><div class="feature glass"><span>◈</span><b>Preview</b><small>Thumbnail + tiêu đề</small></div><div class="feature glass"><span>◉</span><b>MP4 / MP3</b><small>Chọn nhanh định dạng</small></div><div class="feature glass"><span>✈</span><b>Telegram</b><small>Bot dùng chung backend</small></div></section>
+<section class="card glass history"><div class="sectionhead"><div><b>Lịch sử phiên này</b><small>File đã tải từ backend</small></div><button id="refreshHistory" class="mini">↻</button></div><div id="historyList" class="historyList"><div class="empty">Chưa có file nào.</div></div></section>
+</main>
+<footer>ClipNova V5 • Frontend GitHub Pages • Backend Termux</footer>
+<div id="settings" class="drawer"><div class="drawerbox glass"><div class="sectionhead"><b>Cài đặt</b><button id="closeSettings" class="iconbtn">×</button></div><label>Backend API URL<input id="apiInput" placeholder="https://your-backend.example.com"></label><p class="hint">GitHub Pages không chạy Node. Nhập URL backend Termux/Cloudflare Tunnel tại đây. Lưu xong trang sẽ dùng URL mới.</p><button id="saveApi" class="primary">Lưu backend</button><button id="resetApi" class="ghost">Xóa URL tùy chỉnh</button></div></div>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
